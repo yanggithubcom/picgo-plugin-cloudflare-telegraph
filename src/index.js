@@ -48,22 +48,22 @@ module.exports = (ctx) => {
         }
 
 
-        // 把链接保存到文本
-        const fs = require('fs');
-        const os = require('os');
-        // 文件路径，在用户目录.picgo/imgUrl.txt
-        const filePath = os.homedir()+ "/.picgo/imgUrl.txt";
-        // 要追加的内容
-        const contentToAppend = imgList[i]['imgUrl']+ "\n";
+        // // 把链接保存到文本
+        // const fs = require('fs');
+        // const os = require('os');
+        // // 文件路径，在用户目录.picgo/imgUrl.txt
+        // const filePath = os.homedir()+ "/.picgo/imgUrl.txt";
+        // // 要追加的内容
+        // const contentToAppend = imgList[i]['imgUrl']+ "\n";
 
-        // 追加内容
-        fs.appendFile(filePath, contentToAppend, (err) => {
-            if (err) {
-                console.error('追加内容时出错：', err);
-                return;
-            }
-            console.log('内容已成功追加到文件中。');
-        });
+        // // 追加内容
+        // fs.appendFile(filePath, contentToAppend, (err) => {
+        //     if (err) {
+        //         console.error('追加内容时出错：', err);
+        //         return;
+        //     }
+        //     console.log('内容已成功追加到文件中。');
+        // });
       }
     } catch (err) {
       ctx.emit('notification', {
