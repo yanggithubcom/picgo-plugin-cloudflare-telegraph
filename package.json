@@ -17,15 +17,9 @@
   "keywords": [
     "picgo",
     "picgo-gui-plugin",
-    "picgo-plugin",
-    "picgo-plugin-cloudflare-telegraph",
-    "cloudflare-telegraph"
+    "picgo-plugin"
   ],
   "author": "yang",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yanggithubcom/picgo-plugin-cloudflare-telegraph.git"
-  },
   "license": "MIT",
   "devDependencies": {
   }
