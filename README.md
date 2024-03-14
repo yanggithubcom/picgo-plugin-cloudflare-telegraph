@@ -9,7 +9,7 @@
 
 - 部署  [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)  项目，得到  `https://telegraph-image-xx.pages.dev` 图床链接。
 
-![image-20240311113909254](https://telegraph-image-cpc.pages.dev/file/21687ad9ccdbe22b23a83.png)
+  ![image-20240311113909254](https://telegraph-image-cpc.pages.dev/file/21687ad9ccdbe22b23a83.png)
 
 ## 使用
 
@@ -17,11 +17,9 @@
 
 - #### 安装插件
 
-![image-20240311115910836](https://telegraph-image-cpc.pages.dev/file/588894320588b019732ae.png)
+  ![image-20240311115910836](https://telegraph-image-cpc.pages.dev/file/588894320588b019732ae.png)
 
-- #### 图床链接添加到API地址
-
-![image-20240311113909254](https://telegraph-image-8ev.pages.dev/file/9b3871ad967e10e80514f.png)
+- #### 图床链接添加到API地址![image-20240311113909254](https://telegraph-image-8ev.pages.dev/file/9b3871ad967e10e80514f.png)
 
 ### [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/) 配置
 
