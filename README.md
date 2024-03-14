@@ -47,19 +47,20 @@
 
 - #### 配置文件 `~\.picgo\config.json` 参数设置
 
-```json
-{
-  "picBed": {
-    "uploader": "cloudflare-telegraph",
-    "cloudflare-telegraph": {
-      "url": "https://telegraph-image-xxx.pages.dev"
-    }
-  },
-  "picgoPlugins": {
-    "picgo-plugin-cloudflare-telegraph": true
-  }
-}
-```
+   ```
+   {
+     "picBed": {
+       "uploader": "cloudflare-telegraph",
+       "cloudflare-telegraph": {
+         "url": "https://telegraph-image-xxx.pages.dev"
+       }
+     },
+     "picgoPlugins": {
+       "picgo-plugin-cloudflare-telegraph": true
+     }
+   }
+   ```
+
 
 - #### 测试
 
@@ -79,9 +80,9 @@
 
 #### 1、[PicGo (app)](https://github.com/Molunerfinn/PicGo) 配置
 
-找到`PicGo.exe`的位置，后验证
+- 找到`PicGo.exe`的位置，后验证
 
-![image-20240311234220468](https://telegraph-image-cpc.pages.dev/file/d93121c9757652cb9e094.png)
+  ![image-20240311234220468](https://telegraph-image-cpc.pages.dev/file/d93121c9757652cb9e094.png)
 
 #### 2、[PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/) 配置
 
@@ -104,4 +105,8 @@
   ```
 
   ![image-20240311235127416](https://telegraph-image-cpc.pages.dev/file/57c4bdf8101eae07b3210.png)
+
+
+
+
 
