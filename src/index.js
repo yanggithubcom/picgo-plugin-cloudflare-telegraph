@@ -1,21 +1,48 @@
-// const logger = require('@varnxy/logger')
-// logger.setDirectory('/Users/zhang/Work/WorkSpaces/WebWorkSpace/picgo-plugin-cloudflare-telegraph/logs')
-// let log = logger('plugin')
-
 module.exports = (ctx) => {
-  const register = () => {
+  let url ;
+  let username ;
+  let password ;
+
+  const register =  () => {
     ctx.helper.uploader.register('cloudflare-telegraph', {
       handle,
       name: 'cloudflare-telegraph',
       config: config
     })
+    ctx.on('remove', (files, guiApi) =>  {
+      for (let i in files) {
+        // 提取图片名字
+        const imgUrl = files[i]['imgUrl'];
+        const startIndex = imgUrl.indexOf('file/') + 'file/'.length;
+        const imgName = imgUrl.substring(startIndex);
+        // 删除图片URL
+        const imgDeleteUrl = url + "/api/manage/delete/"+imgName;
+
+        let body =getOptions(imgDeleteUrl);
+      }
+    })
   }
+
+  const getOptions = async function (url) {
+    return await ctx.Request.request({
+          method: 'get',
+          url: url,
+          headers: {
+            'Authorization': 'Basic ' + Buffer.from(username+":"+password).toString('base64'),
+            'User-Agent': 'PicGo'
+          }
+        });
+
+  }
+
   const handle = async function (ctx) {
     let userConfig = ctx.getConfig('picBed.cloudflare-telegraph')
     if (!userConfig) {
       throw new Error('Can\'t find uploader config')
     }
-    const url = userConfig.url+"/upload"
+    url = userConfig.url
+    username = userConfig.username
+    password = userConfig.password
     const paramName = "filename"
     const jsonPath = userConfig.url
 
@@ -26,7 +53,7 @@ module.exports = (ctx) => {
         if (!image && imgList[i].base64Image) {
           image = Buffer.from(imgList[i].base64Image, 'base64')
         }
-        const postConfig = postOptions(image,  url, paramName, imgList[i].fileName)
+        const postConfig = postOptions(image,  url+"/upload", paramName, imgList[i].fileName)
         let body = await ctx.Request.request(postConfig)
 
         delete imgList[i].base64Image
@@ -45,24 +72,6 @@ module.exports = (ctx) => {
             })
           }
         }
-
-
-        // // 把链接保存到文本
-        // const fs = require('fs');
-        // const os = require('os');
-        // // 文件路径，在用户目录.picgo/imgUrl.txt
-        // const filePath = os.homedir()+ "/.picgo/imgUrl.txt";
-        // // 要追加的内容
-        // const contentToAppend = imgList[i]['imgUrl']+ "\n";
-
-        // // 追加内容
-        // fs.appendFile(filePath, contentToAppend, (err) => {
-        //     if (err) {
-        //         console.error('追加内容时出错：', err);
-        //         return;
-        //     }
-        //     console.log('内容已成功追加到文件中。');
-        // });
       }
     } catch (err) {
       ctx.emit('notification', {
@@ -106,13 +115,29 @@ module.exports = (ctx) => {
         required: true,
         message: 'https://xxx.pages.dev',
         alias: 'API地址'
+      },
+      {
+        name: 'username',
+        type: 'input',
+        default: userConfig.username,
+        required: false,
+        message: 'username',
+        alias: '用户名'
+      },
+      {
+        name: 'password',
+        type: 'input',
+        default: userConfig.password,
+        required: false,
+        message: 'password',
+        alias: '密码'
       }
     ]
   }
   return {
     uploader: 'cloudflare-telegraph',
     // transformer: 'cloudflare-telegraph',
-    // config: config,
+    // DELregister: DELregister,
     register
 
   }

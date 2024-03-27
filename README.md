@@ -19,7 +19,13 @@
 
   ![image-20240311115910836](https://telegraph-image-cpc.pages.dev/file/588894320588b019732ae.png)
 
-- #### 图床链接添加到API地址![image-20240311113909254](https://telegraph-image-8ev.pages.dev/file/9b3871ad967e10e80514f.png)
+- #### 图床链接添加到API地址
+
+  当用户名和密码为空是，在相册删除照片时，图床的图片不会删除。
+
+  当填写用户名和密码，在相册删除照片时，图床的图片也一起删除。
+
+  #### ![image-20240311113909254](https://telegraph-image-cpc.pages.dev/file/9e5d71f3a5c41e8557f6b.png)
 
 ### [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/) 配置
 
