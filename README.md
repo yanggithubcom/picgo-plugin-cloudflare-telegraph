@@ -1,6 +1,6 @@
 # picgo-plugin-cloudflare-telegraph
 
-## plugin for [PicGo](https://github.com/Molunerfinn/PicGo)
+## [PicGo](https://github.com/Molunerfinn/PicGo) 插件
 
 - 适配 Cloudflare Pages托管 [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image)  项目的 [PicGo](https://github.com/Molunerfinn/PicGo) 插件。
 -  [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image) 是免费图片托管解决方案，Flickr/imgur替代品。使用Cloudflare Pages部署和图片保存在Telegraph。
@@ -25,15 +25,17 @@
 
   当填写用户名和密码，在相册删除照片时，图床的图片也一起删除。
 
+  <font color=red>注</font> ：删除逻辑是把图片加入黑名单屏蔽图片链接实现，可以在图片管理网页加入白名单实现找回
+  
   #### ![image-20240311113909254](https://telegraph-image-cpc.pages.dev/file/9e5d71f3a5c41e8557f6b.png)
 
 ### [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/) 配置
 
 - #### 安装PicGo-Core
 
-  1、下载 [picgo.exe](https://github.com/typora/PicGo-cli/releases) 把程序放到要安装的目录
+  1、下载 [picgo.exe](https://github.com/typora/PicGo-cli/releases) ，可以配置程序的环境变量（可选）
 
-  2、配置环境变量（可选）
+  2、使用 `npm` 全局安装 `npm install picgo -g`
 
 - #### 安装插件
 
@@ -77,7 +79,7 @@
   or
 
   ```
-  picgo upload D:\xxx\xx\xx.jpg
+  picgo u D:\xxx\xx\xx.jpg
   ```
 
 ### Typora 配置

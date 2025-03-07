@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-cloudflare-telegraph",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "cloudflare-telegraph",
   "main": "src/index.js",
   "publishConfig": {
@@ -8,7 +8,6 @@
   },
   "homepage": "https://github.com/yanggithubcom/picgo-plugin-cloudflare-telegraph",
   "scripts": {
-    "publish": "npm publish --registry https://registry.npmjs.org",
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && git push origin master && git push origin --tags",
     "minor": "npm version minor && git push origin master && git push origin --tags",
@@ -20,7 +19,16 @@
     "picgo-plugin"
   ],
   "author": "yang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanggithubcom/picgo-plugin-cloudflare-telegraph.git"
+  },
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.0"
   }
 }
