@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-cloudflare-telegraph",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "cloudflare-telegraph",
   "main": "src/index.js",
   "publishConfig": {
