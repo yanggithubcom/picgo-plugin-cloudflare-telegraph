@@ -1,12 +1,12 @@
 {
   "name": "picgo-plugin-cloudflare-telegraph",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "cloudflare-telegraph",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/yanggithubcom/picgo-plugin-cloudflare-telegraph",
+  "homepage": "https://yanggithubcom.github.io/picgo-plugin-cloudflare-telegraph/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && git push origin master && git push origin --tags",
@@ -16,7 +16,9 @@
   "keywords": [
     "picgo",
     "picgo-gui-plugin",
-    "picgo-plugin"
+    "picgo-plugin",
+    "cloudflare-telegraph",
+    "picgo-plugin-cloudflare-telegraph"
   ],
   "author": "yang",
   "repository": {

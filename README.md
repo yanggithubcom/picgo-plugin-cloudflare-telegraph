@@ -107,7 +107,7 @@
     or
 
   ```
-  picgo upload
+  picgo u
   ```
 
   ![image-20240311235127416](https://telegraph-image-cpc.pages.dev/file/57c4bdf8101eae07b3210.png)
